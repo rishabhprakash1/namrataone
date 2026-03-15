@@ -9,8 +9,10 @@ body {
   font-family: 'Inter', sans-serif;
   background: #080b16;
   color: #e2e8f0;
-  line-height: 1.65;
+  line-height: 1.7;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ── DESIGN TOKENS ── */
@@ -72,7 +74,7 @@ section { position: relative; padding: 100px 0; }
   margin-bottom: 20px;
 }
 .section-tag.center { display: flex; justify-content: center; }
-h2 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; color: #f1f5f9; margin-bottom: 20px; }
+h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.02em; color: #f1f5f9; margin-bottom: 20px; }
 .center { text-align: center; }
 .section-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 640px; margin: 0 auto 60px; text-align: center; }
 
@@ -114,8 +116,8 @@ h2 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-we
   display: flex; align-items: center; gap: 40px; height: 72px;
 }
 .logo {
-  font-family: 'Syne', sans-serif; font-size: 1.35rem; font-weight: 800;
-  color: #f1f5f9; text-decoration: none; white-space: nowrap;
+  font-family: 'Outfit', sans-serif; font-size: 1.35rem; font-weight: 700;
+  color: #f1f5f9; text-decoration: none; white-space: nowrap; letter-spacing: -0.01em;
 }
 .dot { color: var(--accent); }
 .nav-links {
@@ -177,9 +179,10 @@ h2 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-we
   animation: fadeUp 0.7s ease both;
 }
 h1 {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 900; line-height: 1.1;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800; line-height: 1.2;
+  letter-spacing: -0.03em;
   color: #f8fafc;
   margin-bottom: 24px;
   animation: fadeUp 0.7s 0.1s ease both;
@@ -199,7 +202,7 @@ h1 {
   animation: fadeUp 0.7s 0.4s ease both;
 }
 .stat { flex: 1; min-width: 100px; padding: 20px 24px; text-align: center; }
-.stat-num { display: block; font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.stat-num { display: block; font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .stat-label { display: block; font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
 .stat-divider { width: 1px; background: var(--border); }
 
@@ -317,7 +320,7 @@ h1 {
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-card);
 }
-.about-metrics-card h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; color: #f1f5f9; margin-bottom: 28px; }
+.about-metrics-card h3 { font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #f1f5f9; margin-bottom: 28px; letter-spacing: -0.01em; }
 .metric-row { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
 .metric-label { font-size: 0.8rem; color: var(--text-muted); flex: 1 0 140px; }
 .progress-bar { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
@@ -380,7 +383,7 @@ h1 {
   padding: 3px 10px; border-radius: 100px;
 }
 .svc-icon { font-size: 2rem; margin-bottom: 16px; display: block; position: relative; z-index: 1; }
-.service-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: #f1f5f9; margin-bottom: 12px; position: relative; z-index: 1; }
+.service-card h3 { font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #f1f5f9; margin-bottom: 12px; position: relative; z-index: 1; letter-spacing: -0.01em; }
 .service-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; position: relative; z-index: 1; }
 .svc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; position: relative; z-index: 1; }
 .svc-tags span {
@@ -410,12 +413,12 @@ h1 {
 }
 .step-card:hover { transform: translateY(-4px); border-color: var(--border-glow); }
 .step-num {
-  font-family: 'Syne', sans-serif; font-size: 3.5rem; font-weight: 900;
+  font-family: 'Outfit', sans-serif; font-size: 3.2rem; font-weight: 800;
   background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  line-height: 1; margin-bottom: 12px; opacity: 0.6;
+  line-height: 1; margin-bottom: 12px; opacity: 0.6; letter-spacing: -0.03em;
 }
 .step-icon { font-size: 1.8rem; margin-bottom: 16px; }
-.step-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: #f1f5f9; margin-bottom: 10px; }
+.step-card h3 { font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: #f1f5f9; margin-bottom: 10px; letter-spacing: -0.01em; }
 .step-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
 .step-duration { margin-top: 20px; font-size: 0.75rem; font-weight: 600; color: var(--accent2); }
 .step-arrow { font-size: 1.5rem; color: var(--border-glow); align-self: center; flex-shrink: 0; }
@@ -479,8 +482,8 @@ h1 {
   font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
   padding: 5px 20px; border-radius: 100px;
 }
-.price-plan-name { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 700; color: #f1f5f9; margin-bottom: 12px; }
-.price-tag { font-family: 'Syne', sans-serif; font-size: 2.4rem; font-weight: 900; margin-bottom: 8px; background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.price-plan-name { font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 700; color: #f1f5f9; margin-bottom: 12px; letter-spacing: -0.01em; }
+.price-tag { font-family: 'Outfit', sans-serif; font-size: 2.4rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.03em; background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .price-tag span { font-size: 1rem; font-weight: 400; color: var(--text-muted); -webkit-text-fill-color: var(--text-muted); }
 .price-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 28px; line-height: 1.5; }
 .price-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
