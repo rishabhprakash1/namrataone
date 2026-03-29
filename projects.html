@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar solid-nav">
+    <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <span class="logo-bvp">BVP</span>
@@ -37,163 +37,262 @@
         </div>
     </header>
 
-    <section class="projects-list-section pt-50 pb-100">
-        <div class="container">
-
-            <!-- Project 1 -->
-            <div class="project-detailed-card">
-                <div class="project-info">
-                    <h2>1. Book Distribution</h2>
-                    <p>Education is the key to national development. Through our Book Distribution drives, we ensure that students from underserved communities have access to the necessary academic material to pursue their schooling without financial barriers.</p>
+    <section class="projects-hub pt-100 pb-100 bg-light">
+        <div class="container projects-layout">
+            <!-- Sidebar / LHS -->
+            <aside class="projects-sidebar">
+                <h3 style="margin-bottom: 1rem; color: var(--text-heading); font-family: var(--font-body); padding-left: 0.5rem;">Select an Initiative</h3>
+                <ul class="project-tabs">
+                    <li class="tab-link active" data-target="proj-1">Book Distribution</li>
+                    <li class="tab-link" data-target="proj-2">School Bag Distribution</li>
+                    <li class="tab-link" data-target="proj-3">Footwear Distribution</li>
+                    <li class="tab-link" data-target="proj-4">Tree Plantation</li>
+                    <li class="tab-link" data-target="proj-5">Plastic Recycling</li>
+                    <li class="tab-link" data-target="proj-6">Bharat Ko Jano</li>
+                    <li class="tab-link" data-target="proj-7">COVID Food Distribution</li>
+                    <li class="tab-link" data-target="proj-8">Baal Sanskar Shivir</li>
+                    <li class="tab-link" data-target="proj-9">National Group Song</li>
+                    <li class="tab-link" data-target="proj-10">Sunderkand Path</li>
+                    <li class="tab-link" data-target="proj-11">Ujiyara Utsav</li>
+                </ul>
+            </aside>
+            
+            <!-- Content / RHS -->
+            <main class="projects-display">
+                <!-- Project 1 -->
+                <div id="proj-1" class="project-pane active">
+                    <h2>Book Distribution</h2>
+                    <div class="project-importance">
+                        <p><strong>Why this is important:</strong> Education forms the bedrock of a progressing nation. Many children from low-income families drop out simply because they cannot afford basic academic materials. By distributing books, we remove this critical barrier and ensure every child has the opportunity to learn, dream, and conquer their circumstances.</p>
+                    </div>
+                    <div class="carousel-container mt-30">
+                        <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-track">
+                            <img src="Book%20Distro.jpeg" alt="Book Distribution 1">
+                            <img src="Book%20Distro.png" alt="Book Distribution 2">
+                            <img src="Book%20Distro%202jpeg.jpeg" alt="Book Distribution 3">
+                            <img src="Book%20Distro%203.png" alt="Book Distribution 4">
+                            <img src="Book%20Distro%205.png" alt="Book Distribution 5">
+                        </div>
+                        <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
                 </div>
-                <div class="project-images">
-                    <div class="img-box"><img src="Book%20Distro.jpeg" alt="Book Distribution 1" class="fallback-img"></div>
-                    <div class="img-box"><img src="Book%20Distro.png" alt="Book Distribution 2" class="fallback-img"></div>
-                    <div class="img-box"><img src="Book%20Distro%202jpeg.jpeg" alt="Book Distribution 3" class="fallback-img"></div>
-                    <div class="img-box"><img src="Book%20Distro%203.png" alt="Book Distribution 4" class="fallback-img"></div>
-                    <div class="img-box"><img src="Book%20Distro%205.png" alt="Book Distribution 5" class="fallback-img"></div>
+
+                <!-- Project 2 -->
+                <div id="proj-2" class="project-pane">
+                    <h2>School Bag Distribution</h2>
+                    <div class="project-importance">
+                        <p><strong>Why this is important:</strong> A sturdy school bag is a symbol of preparedness and dignity for a young student. It protects their valuable educational tools from weather damage and wear-and-tear. Equipping children properly builds their confidence and encourages consistent school attendance.</p>
+                    </div>
+                    <div class="carousel-container mt-30">
+                        <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-track">
+                            <img src="Bag%20Distro%201.jpeg" alt="School Bag Distribution 1">
+                            <img src="Bag%20Distro%202.jpeg" alt="School Bag Distribution 2">
+                        </div>
+                        <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div id="proj-3" class="project-pane">
+                    <h2>Footwear Distribution</h2>
+                    <div class="project-importance">
+                        <p><strong>Why this is important:</strong> Footwear is a basic necessity often taken for granted. In marginalized areas, children walking barefoot for miles are exposed to severe injuries and soil-transmitted infections. Distributing durable footwear restores their mobility and safeguards their health and dignity.</p>
+                    </div>
+                    <div class="carousel-container mt-30">
+                        <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-track">
+                            <img src="Footweaer%20Distro.jpeg" alt="Footwear Distribution 1">
+                            <img src="Footwear%202.jpg" alt="Footwear Distribution 2">
+                            <img src="Footwear%203.jpg" alt="Footwear Distribution 3">
+                            <img src="Foorweaer%204.jpg" alt="Footwear Distribution 4">
+                            <img src="Footwear%205.jpg" alt="Footwear Distribution 5">
+                        </div>
+                        <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div id="proj-4" class="project-pane">
+                    <h2>Tree Plantation</h2>
+                    <div class="project-importance">
+                        <p><strong>Why this is important:</strong> Rapid urbanization in local communities has severely depleted our green cover. Mass tree plantation is not just an environmental duty; it's a critical step toward combating pollution, improving air quality, and ensuring a sustainable, livable habitat for future generations.</p>
+                    </div>
+                    <div class="carousel-container mt-30">
+                        <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-track">
+                            <img src="Tree%20Plantation.jpg" alt="Tree Plantation 1">
+                            <img src="Tree%202.jpg" alt="Tree Plantation 2">
+                            <img src="Tree%203.jpeg" alt="Tree Plantation 3">
+                            <img src="Tree%204.jpeg" alt="Tree Plantation 4">
+                            <img src="Tree%205.jpeg" alt="Tree Plantation 5">
+                            <img src="Tree%206.jpeg" alt="Tree Plantation 6">
+                        </div>
+                        <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div id="proj-5" class="project-pane">
+                    <h2>Plastic Recycling</h2>
+                    <div class="project-importance">
+                        <p><strong>Why this is important:</strong> Single-use plastics are clogging our waterways, filling our streets, and poisoning local marine wildlife. Our plastic recycling initiative empowers citizens to take direct responsibility for their footprint, turning hazardous waste into reusable materials.</p>
+                    </div>
+                    <div class="carousel-container mt-30">
+                        <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-track">
+                            <img src="Plastic%20Recycling%20.jpg" alt="Plastic Recycling 1">
+                            <img src="Plastic%202.jpg" alt="Plastic Recycling 2">
+                            <img src="Plastic%203.jpg" alt="Plastic Recycling 3">
+                            <img src="Plastic%204.jpg" alt="Plastic Recycling 4">
+                        </div>
+                        <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div id="proj-6" class="project-pane">
+                    <h2>Bharat Ko Jano</h2>
+                    <div class="project-importance">
+                        <p><strong>Why this is important:</strong> A disconnect from one's roots leads to a loss of cultural identity. The 'Bharat Ko Jano' quiz competition reignites a profound sense of pride and belonging among students by immersing them in the rich historical, geographical, and cultural legacy of India.</p>
+                    </div>
+                    <div class="carousel-container mt-30">
+                        <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-track">
+                            <img src="BKJ.JPG" alt="Bharat Ko Jano 1">
+                            <img src="BKJ%202.JPG" alt="Bharat Ko Jano 2">
+                            <img src="BKJ%203.JPG" alt="Bharat Ko Jano 3">
+                            <img src="BKJ%204.JPG" alt="Bharat Ko Jano 4">
+                            <img src="BKJ%205.jpg" alt="Bharat Ko Jano 5">
+                            <img src="BKJ%206.png" alt="Bharat Ko Jano 6">
+                            <img src="BKJ%207.png" alt="Bharat Ko Jano 7">
+                        </div>
+                        <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div id="proj-7" class="project-pane">
+                    <h2>COVID Food Distribution</h2>
+                    <div class="project-importance">
+                        <p><strong>Why this is important:</strong> During times of catastrophic crisis like the pandemic, sheer survival takes precedence. By stepping onto the frontlines to distribute hot meals and raw staples, we ensured that families who abruptly lost their livelihoods did not have to suffer from starvation.</p>
+                    </div>
+                    <div class="carousel-container mt-30">
+                        <div class="carousel-track">
+                            <img src="Covid%20Food%20Disto.png" alt="COVID Food Distribution">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div id="proj-8" class="project-pane">
+                    <h2>Baal Sanskar Shivir</h2>
+                    <div class="project-importance">
+                        <p><strong>Why this is important:</strong> In a modern, highly distracted world, foundational moral values (Sanskar) are often neglected. These immersive camps instill ethics, respect for elders, and a strong character through traditional games and storytelling, guiding children to become responsible citizens.</p>
+                    </div>
+                    <div class="carousel-container mt-30">
+                        <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-track">
+                            <img src="Baal%20Sanskar%20Shivir.jpeg" alt="Baal Sanskar Shivir">
+                            <img src="BSS%202.jpeg" alt="Baal Sanskar Shivir 2">
+                        </div>
+                        <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div id="proj-9" class="project-pane">
+                    <h2>National Group Song Competition</h2>
+                    <div class="project-importance">
+                        <p><strong>Why this is important:</strong> Music is a universal language, and cultural traditions are the invisible threads that bind our country together. This competition brings youths together to celebrate India's linguistic diversity through patriotic renditions, fostering an unbreakable spirit of national unity.</p>
+                    </div>
+                    <div class="carousel-container mt-30">
+                        <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-track">
+                            <img src="National%20Group%20Song.JPG" alt="National Group Song Competition">
+                            <img src="National%20group%20song%202.JPG" alt="National Group Song Competition 2">
+                            <img src="National%20Groip%20Song%204.JPG" alt="National Group Song Competition 4">
+                            <img src="National%20Group%20Song%205.JPG" alt="National Group Song Competition 5">
+                        </div>
+                        <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div id="proj-10" class="project-pane">
+                    <h2>Sunderkand Path</h2>
+                    <div class="project-importance">
+                        <p><strong>Why this is important:</strong> Spiritual and mental well-being is vital for a resilient and thriving community. Our collective Sunderkand Path gatherings invite families to share in community prayer and devotion, offering deep solace, spiritual cleansing, and strengthening our communal bonds.</p>
+                    </div>
+                    <div class="carousel-container mt-30">
+                        <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-track">
+                            <img src="Sunderkand%20Path.jpeg" alt="Sunderkand Path">
+                            <img src="Sunderrkand%202.jpeg" alt="Sunderkand Path 2">
+                            <img src="Sunderkand%203.jpeg" alt="Sunderkand Path 3">
+                        </div>
+                        <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div id="proj-11" class="project-pane">
+                    <h2>Ujiyara Utsav</h2>
+                    <div class="project-importance">
+                        <p><strong>Why this is important:</strong> The "Festival of Light" should illuminate every home, but economic hardships often extinguish that joy for the marginalized. Ujiyara Utsav is our initiative to distribute festive essentials and treats directly to the needy, ensuring that nobody is left out of the celebrations.</p>
+                    </div>
+                    <div class="carousel-container mt-30">
+                        <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-track">
+                            <img src="Ujiyara%20Utsav.jpeg" alt="Ujiyara Utsav">
+                            <img src="Ujiyara%20Utsav.png" alt="Ujiyara Utsav 2">
+                            <img src="Ujiyara%20Utsav%203.jpeg" alt="Ujiyara Utsav 3">
+                            <img src="Ujiyara%20Utsav%204.jpeg" alt="Ujiyara Utsav 4">
+                            <img src="Ujiyara%20Utsav%206.jpeg" alt="Ujiyara Utsav 6">
+                        </div>
+                        <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </section>
+
+    <!-- Bring in Contact & Donate section to the bottom of the page per user request -->
+    <section id="donate" class="donate-section pt-100 pb-100 bg-dark text-white">
+        <div class="container auto-grid align-center">
+            <div class="contact-text">
+                <h3 class="section-tag section-tag-light">Contribute & Join</h3>
+                <h2 class="section-title">Contact Us & Donate</h2>
+                <p>Your generous contribution helps us sustain our projects in education, health, and environmental conservation. Join hands with Bharat Vikas Parishad to make a lasting impact in society.</p>
+                
+                <ul class="contact-info mt-30">
+                    <li><i class="fas fa-map-marker-alt"></i> Samarpan Shakha, Mira Road, Maharashtra</li>
+                    <li><i class="fas fa-envelope"></i> contactus@bvpsamarpanshakha.com</li>
+                    <li><i class="fas fa-phone"></i> +91 80049 78020</li>
+                </ul>
+            </div>
+            
+            <div class="qr-container" style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                <div class="qr-card" style="flex: 1; min-width: 220px; padding: 2rem 1.5rem;">
+                    <h3 style="font-size: 1.5rem;">Donate</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Support our noble causes via UPI.</p>
+                    <div class="qr-image-wrapper" style="width: 150px; height: 150px;">
+                        <img src="Pay%20US.jpeg" alt="Donate QR Code" class="qr-image fallback-img">
+                    </div>
+                    <p class="qr-note" style="font-size: 1rem;">UPI: bvp-samarpan@upi</p>
+                </div>
+
+                <div class="qr-card" style="flex: 1; min-width: 220px; padding: 2rem 1.5rem;">
+                    <h3 style="font-size: 1.5rem;">Join Us</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Scan to open membership form.</p>
+                    <div class="qr-image-wrapper" style="width: 150px; height: 150px;">
+                        <img src="Connect%20with%20Us.png" alt="Membership Form QR Code" class="qr-image fallback-img">
+                    </div>
+                    <p class="qr-note" style="font-size: 1rem;">Be a part of BVP</p>
                 </div>
             </div>
-
-            <!-- Project 2 -->
-            <div class="project-detailed-card alt-layout">
-                <div class="project-info">
-                    <h2>2. School Bag Distribution</h2>
-                    <p>Providing sturdy school bags to young, aspiring minds. The aim is to equip children with proper gear so they can confidently go to school and carry their educational materials safely.</p>
-                </div>
-                <div class="project-images">
-                    <div class="img-box"><img src="Bag%20Distro%201.jpeg" alt="School Bag Distribution 1" class="fallback-img"></div>
-                    <div class="img-box"><img src="Bag%20Distro%202.jpeg" alt="School Bag Distribution 2" class="fallback-img"></div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-detailed-card">
-                <div class="project-info">
-                    <h2>3. Footwear Distribution</h2>
-                    <p>A basic necessity often overlooked. We distribute safe, durable footwear among tribal and underprivileged communities to protect them from harsh weather conditions and infections.</p>
-                </div>
-                <div class="project-images">
-                    <div class="img-box"><img src="Footweaer%20Distro.jpeg" alt="Footwear Distribution 1" class="fallback-img"></div>
-                    <div class="img-box"><img src="Footwear%202.jpg" alt="Footwear Distribution 2" class="fallback-img"></div>
-                    <div class="img-box"><img src="Footwear%203.jpg" alt="Footwear Distribution 3" class="fallback-img"></div>
-                    <div class="img-box"><img src="Foorweaer%204.jpg" alt="Footwear Distribution 4" class="fallback-img"></div>
-                    <div class="img-box"><img src="Footwear%205.jpg" alt="Footwear Distribution 5" class="fallback-img"></div>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-detailed-card alt-layout">
-                <div class="project-info">
-                    <h2>4. Tree Plantation</h2>
-                    <p>Safeguarding our environment is part of our commitment to the nation. We organize large-scale tree plantation campaigns across Mira Road to increase the green cover, combat pollution, and foster environmental awareness.</p>
-                </div>
-                <div class="project-images">
-                    <div class="img-box"><img src="Tree%20Plantation.jpg" alt="Tree Plantation 1" class="fallback-img"></div>
-                    <div class="img-box"><img src="Tree%202.jpg" alt="Tree Plantation 2" class="fallback-img"></div>
-                    <div class="img-box"><img src="Tree%203.jpeg" alt="Tree Plantation 3" class="fallback-img"></div>
-                    <div class="img-box"><img src="Tree%204.jpeg" alt="Tree Plantation 4" class="fallback-img"></div>
-                    <div class="img-box"><img src="Tree%205.jpeg" alt="Tree Plantation 5" class="fallback-img"></div>
-                    <div class="img-box"><img src="Tree%206.jpeg" alt="Tree Plantation 6" class="fallback-img"></div>
-                </div>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="project-detailed-card">
-                <div class="project-info">
-                    <h2>5. Plastic Recycling</h2>
-                    <p>With an emphasis on sustainability, our plastic recycling initiatives encourage citizens to collect and donate single-use plastics, which are then routed securely to recycling facilities, thereby preventing local environmental degradation.</p>
-                </div>
-                <div class="project-images">
-                    <div class="img-box"><img src="Plastic%20Recycling%20.jpg" alt="Plastic Recycling 1" class="fallback-img"></div>
-                    <div class="img-box"><img src="Plastic%202.jpg" alt="Plastic Recycling 2" class="fallback-img"></div>
-                    <div class="img-box"><img src="Plastic%203.jpg" alt="Plastic Recycling 3" class="fallback-img"></div>
-                    <div class="img-box"><img src="Plastic%204.jpg" alt="Plastic Recycling 4" class="fallback-img"></div>
-                </div>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="project-detailed-card alt-layout">
-                <div class="project-info">
-                    <h2>6. Bharat Ko Jano</h2>
-                    <p>An inspiring multi-level written and oral quiz competition on the historical, cultural, and geographical details of India. BKJ empowers students to learn about their motherland and instills a deep sense of pride.</p>
-                </div>
-                <div class="project-images">
-                    <div class="img-box"><img src="BKJ.JPG" alt="Bharat Ko Jano 1" class="fallback-img"></div>
-                    <div class="img-box"><img src="BKJ%202.JPG" alt="Bharat Ko Jano 2" class="fallback-img"></div>
-                    <div class="img-box"><img src="BKJ%203.JPG" alt="Bharat Ko Jano 3" class="fallback-img"></div>
-                    <div class="img-box"><img src="BKJ%204.JPG" alt="Bharat Ko Jano 4" class="fallback-img"></div>
-                    <div class="img-box"><img src="BKJ%205.jpg" alt="Bharat Ko Jano 5" class="fallback-img"></div>
-                    <div class="img-box"><img src="BKJ%206.png" alt="Bharat Ko Jano 6" class="fallback-img"></div>
-                    <div class="img-box"><img src="BKJ%207.png" alt="Bharat Ko Jano 7" class="fallback-img"></div>
-                </div>
-            </div>
-
-            <!-- Project 7 -->
-            <div class="project-detailed-card">
-                <div class="project-info">
-                    <h2>7. COVID Food Distribution</h2>
-                    <p>During the unprecedented challenges of the COVID-19 pandemic, BVP Samarpan Shakha stood with the community. We arranged extensive daily distributions of nutritious cooked meals and essential raw grocery kits to families who lost their livelihood.</p>
-                </div>
-                <div class="project-images">
-                    <div class="img-box"><img src="Covid%20Food%20Disto.png" alt="COVID Food Distribution" class="fallback-img"></div>
-                </div>
-            </div>
-
-            <!-- Project 8 -->
-            <div class="project-detailed-card alt-layout">
-                <div class="project-info">
-                    <h2>8. Baal Sanskar Shivir</h2>
-                    <p>A specialized camp designed for children to impart strong ethical and moral values (Sanskar). These workshops feature interactive storytelling, traditional games, and character-building exercises crucial for their holistic development.</p>
-                </div>
-                <div class="project-images">
-                    <div class="img-box"><img src="Baal%20Sanskar%20Shivir.jpeg" alt="Baal Sanskar Shivir" class="fallback-img"></div>
-                    <div class="img-box"><img src="BSS%202.jpeg" alt="Baal Sanskar Shivir 2" class="fallback-img"></div>
-                </div>
-            </div>
-
-            <!-- Project 9 -->
-            <div class="project-detailed-card">
-                <div class="project-info">
-                    <h2>9. National Group Song Competition</h2>
-                    <p>Promoting the cultural heritage and musical traditions of India, our National Group Song Competition brings together talented youths from various schools. It fosters patriotism and unity in diversity through melodious renditions in Hindi and Sanskrit.</p>
-                </div>
-                <div class="project-images">
-                    <div class="img-box"><img src="National%20Group%20Song.JPG" alt="National Group Song Competition" class="fallback-img"></div>
-                    <div class="img-box"><img src="National%20group%20song%202.JPG" alt="National Group Song Competition 2" class="fallback-img"></div>
-                    <div class="img-box"><img src="National%20Groip%20Song%204.JPG" alt="National Group Song Competition 4" class="fallback-img"></div>
-                    <div class="img-box"><img src="National%20Group%20Song%205.JPG" alt="National Group Song Competition 5" class="fallback-img"></div>
-                </div>
-            </div>
-
-            <!-- Project 10 -->
-            <div class="project-detailed-card alt-layout">
-                <div class="project-info">
-                    <h2>10. Sunderkand Path</h2>
-                    <p>Spiritual rejuvenation is at the heart of finding peace and resilience. Our regular Sunderkand Path gatherings invite community members for collective prayer, reflection, and devotion, strengthening our spiritual bonds.</p>
-                </div>
-                <div class="project-images">
-                    <div class="img-box"><img src="Sunderkand%20Path.jpeg" alt="Sunderkand Path" class="fallback-img"></div>
-                    <div class="img-box"><img src="Sunderrkand%202.jpeg" alt="Sunderkand Path 2" class="fallback-img"></div>
-                    <div class="img-box"><img src="Sunderkand%203.jpeg" alt="Sunderkand Path 3" class="fallback-img"></div>
-                </div>
-            </div>
-
-            <!-- Project 11 -->
-            <div class="project-detailed-card">
-                <div class="project-info">
-                    <h2>11. Ujiyara Utsav</h2>
-                    <p>Ujiyara Utsav (Festival of Light) embodies the spirit of spreading joy among those in need. During festive times, we coordinate the distribution of festive foods, clothing, and essential items, ensuring nobody is left behind in the celebrations.</p>
-                </div>
-                <div class="project-images">
-                    <div class="img-box"><img src="Ujiyara%20Utsav.jpeg" alt="Ujiyara Utsav" class="fallback-img"></div>
-                    <div class="img-box"><img src="Ujiyara%20Utsav.png" alt="Ujiyara Utsav 2" class="fallback-img"></div>
-                    <div class="img-box"><img src="Ujiyara%20Utsav%203.jpeg" alt="Ujiyara Utsav 3" class="fallback-img"></div>
-                    <div class="img-box"><img src="Ujiyara%20Utsav%204.jpeg" alt="Ujiyara Utsav 4" class="fallback-img"></div>
-                    <div class="img-box"><img src="Ujiyara%20Utsav%206.jpeg" alt="Ujiyara Utsav 6" class="fallback-img"></div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -221,6 +320,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Fixed Mobile Donate Button -->
+    <a href="upi://pay?pa=kolabix@idfcbank&pn=Bharat%20Vikas%20Parishad" class="mobile-donate-fab">
+        <i class="fas fa-heart"></i> Donate Now via UPI
+    </a>
 
     <script src="script.js"></script>
 </body>

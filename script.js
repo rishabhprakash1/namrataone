@@ -19,28 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Navbar Scroll Effect
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (!navbar.classList.contains('solid-nav')) {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        }
-    });
-
     // Close mobile menu when clicking a link
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
-            if (navLinks.classList.contains('active')) {
+            if (navLinks && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
-                const icon = hamburger.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                if (hamburger) {
+                    const icon = hamburger.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             }
         });
     });
@@ -54,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
-                const headerOffset = 80; // approximate navbar height
+                const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -64,5 +53,56 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+    });
+
+    // PROJECTS PAGE: Tab Switching Logic
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const projectPanes = document.querySelectorAll('.project-pane');
+
+    if(tabLinks.length > 0 && projectPanes.length > 0) {
+        tabLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove active class from all tabs and panes
+                tabLinks.forEach(l => l.classList.remove('active'));
+                projectPanes.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked tab and target pane
+                link.classList.add('active');
+                const targetId = link.getAttribute('data-target');
+                const targetPane = document.getElementById(targetId);
+                
+                if(targetPane) {
+                    targetPane.classList.add('active');
+                    
+                    // On mobile, scroll to content slightly below the sticky menu
+                    if(window.innerWidth <= 992) {
+                        const headerOffset = 180; // Account for sticky menu and header
+                        const elementPosition = targetPane.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    }
+
+    // PROJECTS PAGE: Carousel Navigation
+    const carousels = document.querySelectorAll('.carousel-container');
+    carousels.forEach(carousel => {
+        const track = carousel.querySelector('.carousel-track');
+        const prevBtn = carousel.querySelector('.carousel-prev');
+        const nextBtn = carousel.querySelector('.carousel-next');
+        
+        if (prevBtn && nextBtn && track) {
+            // Scroll by approximately one image width
+            prevBtn.addEventListener('click', () => {
+                const scrollAmount = track.clientWidth * 0.8;
+                track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+            nextBtn.addEventListener('click', () => {
+                const scrollAmount = track.clientWidth * 0.8;
+                track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
     });
 });

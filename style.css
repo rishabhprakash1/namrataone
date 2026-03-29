@@ -543,63 +543,150 @@ ul {
     margin: 0;
 }
 
-/* === DETAILED PROJECTS (PROJECTS.HTML) === */
-.project-detailed-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+/* === PROJECTS HUB LAYOUT === */
+.projects-layout {
+    display: flex;
     gap: 3rem;
-    align-items: center;
-    margin-bottom: 4rem;
+    align-items: flex-start;
+}
+
+.projects-sidebar {
+    width: 25%;
+    position: sticky;
+    top: 100px;
     background: #ffffff;
-    padding: 3rem;
     border-radius: var(--radius);
+    padding: 1.5rem;
     box-shadow: var(--shadow-sm);
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
 }
 
-/* The true fix for RTL orientation issues */
-.project-detailed-card.alt-layout .project-info {
-    order: 2;
-}
-.project-detailed-card.alt-layout .project-images {
-    order: 1;
+.project-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.project-info h2 {
-    font-size: 2rem;
+.tab-link {
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+.tab-link:hover {
+    background-color: var(--bg-light);
+    color: var(--primary);
+}
+
+.tab-link.active {
+    background-color: rgba(235, 128, 34, 0.1);
+    color: var(--primary);
+    border-left-color: var(--primary);
+    font-weight: 700;
+}
+
+.projects-display {
+    width: 75%;
+    background: #ffffff;
+    border-radius: var(--radius);
+    padding: 3rem;
+    box-shadow: var(--shadow-sm);
+    min-height: 60vh;
+}
+
+.project-pane {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.project-pane.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.project-pane h2 {
+    font-size: 2.5rem;
     color: var(--text-heading);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 1rem;
 }
 
-.project-info p {
-    font-size: 1.1rem;
+.project-importance {
+    font-size: 1.15rem;
     color: var(--text-light);
+    line-height: 1.8;
+    background-color: var(--bg-light);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+    margin-bottom: 2rem;
 }
 
-.project-images {
+.project-importance strong {
+    color: var(--secondary);
+}
+
+/* === CAROUSEL === */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+}
+.carousel-track::-webkit-scrollbar {
+    display: none;
 }
 
-.project-images .img-box {
-    flex: 1;
-    min-width: 200px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-}
-
-.project-images img {
-    width: 100%;
-    height: 100%;
+.carousel-track img {
+    flex: 0 0 100%;
+    height: 400px;
     object-fit: cover;
-    aspect-ratio: 4/3;
-    transition: transform 0.3s;
+    border-radius: 8px;
+    scroll-snap-align: center;
 }
 
-.project-images img:hover {
-    transform: scale(1.05);
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--primary);
+    z-index: 2;
+    transition: var(--transition);
 }
+.carousel-btn:hover {
+    background: var(--primary);
+    color: #fff;
+}
+.carousel-prev { left: -20px; }
+.carousel-next { right: -20px; }
 
 /* === DONATE & CONTACT === */
 .donate-section.bg-dark {
@@ -730,18 +817,50 @@ ul {
 
     .hero-title { font-size: 3.5rem; }
     
-    .project-detailed-card, .project-detailed-card.alt-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .projects-layout {
+        flex-direction: column;
     }
+    .projects-sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+        max-height: none;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .project-tabs {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        white-space: nowrap;
+        scrollbar-width: none;
+        gap: 0.5rem;
+    }
+    .project-tabs::-webkit-scrollbar { display: none; }
     
-    /* Undo the desktop ordering on mobile for natural reading flow */
-    .project-detailed-card.alt-layout .project-info {
-        order: 1;
+    .tab-link {
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        padding: 0.75rem 1.25rem;
+        background: var(--bg-light);
+        border-radius: 30px;
     }
-    .project-detailed-card.alt-layout .project-images {
-        order: 2;
+    .tab-link.active {
+        border-bottom-color: transparent;
+        border-radius: 30px;
+        background: var(--primary);
+        color: white;
     }
+    .projects-display {
+        width: 100%;
+        padding: 1.5rem;
+    }
+    .carousel-track img {
+        height: 250px;
+    }
+    .carousel-prev { left: 5px; }
+    .carousel-next { right: 5px; }
 }
 
 @media (max-width: 768px) {
@@ -783,4 +902,32 @@ ul {
     
     .container-flex { flex-direction: column; text-align: center; }
     .project-header { text-align: center; }
+}
+
+/* === MOBILE DONATE CTA === */
+.mobile-donate-fab {
+    display: none;
+}
+@media (max-width: 768px) {
+    .mobile-donate-fab {
+        display: flex;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--primary);
+        color: white !important;
+        padding: 12px 24px;
+        border-radius: 30px;
+        box-shadow: 0 4px 15px rgba(235, 128, 34, 0.5);
+        z-index: 1000;
+        font-weight: 700;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        width: 90%;
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+    body { padding-bottom: 80px; }
 }
